@@ -28,7 +28,7 @@ export default {
   setup: function (){
     const request = inject('request')
     const token = inject('token')
-    const loginForm = ref({ username: 'admin', password: 'admin' })
+    const loginForm = ref({ username: '', password: '' })
     const block = ref(false)
     const errorMessage = ref('')
     return { request, loginForm, token, block, errorMessage }
