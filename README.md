@@ -1,18 +1,21 @@
 # VGranite Web
 
-WEB-Интерфейс для проекта [VGranite](https://gitlab.com/ponik_rf/vgranite).
-Вам может понадобится этот проект только в случае если вы хотите внести изменения в интрефейс проекта [VGranite](https://gitlab.com/ponik_rf/vgranite). 
+WEB-interface for the project [VGranite](https://github.com/ponikrf/VGranite).
+You may only need this project if you want to make changes to the project's interface [VGranite](https://github.com/ponikrf/VGranite). 
 
-По умолчанию хост для запросов к API не указан, это значит что он будет обращаться туда, откуда будет запущен. 
-В случае использования dev сервера необходимо указать к какому хосту нужно обращаться, это можно сделать в файле `/src/App.vue` - см. `host`.
 
-Рекомендуется для более быстрого тестирования указать `username` и `password` в форме логина. 
-Сделать это можно в файле `/src/views/LoginView.vue` - см. `loginForm`.
+By default, the host for API requests is not specified, which means that it will be accessed wherever it is launched from. 
+In case of using dev server you need to specify which host to access, this can be done in the `/src/App.vue` file - see `host`. `host`.
 
-## Установка
+
+It is recommended to specify `username` and `password` in the login form for faster testing. 
+
+You can do this in the `/src/views/LoginView.vue` file - see `loginForm`.
+
+## INSTALL & BUILD
 
 ```bash
-git clone https://gitlab.com/ponik_rf/vgranite-web.git
+git clone https://github.com/ponikrf/VGranite-Web
 ```
 
 ```bash
@@ -23,13 +26,9 @@ cd vgranite-web
 npm install
 ```
 
-## Сборка
-
-После запуска 
-
 ```bash
 npm run build 
 ```
 
-Будет создана папка `build` в корне проекта. Ее необходимо с заменой переместить в папку `/device/vgranite/web`. 
-В конечной сборке используйте пустое поле `host` (см. выше)
+A `build` folder will be created in the root of the project. It should be moved with replacement to the `/device/vgranite/web` folder. 
+In the final build use the empty `host` field (see above)
