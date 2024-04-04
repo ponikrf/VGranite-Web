@@ -4,6 +4,7 @@
             <div class="btn-group" role="group" aria-label="Basic example">
                 <button @click="$router.push({name: 'EditElement', params: {id: id, device: source.device} })" type="button" class="btn btn-light"><i class="bi bi-list"></i></button>
             </div>
+            <span v-if="marker && markers" class="badge rounded-pill " :class="marker">{{ markers[marker] }}</span>
             <button class="btn btn-warning" v-if="status.status !== 'on'" @click="showStatus=!showStatus"><i class="bi bi-exclamation-diamond-fill"></i></button>
             <div class="me-3" :class="{'text-danger': status.status !== 'on','text-success': status.status === 'on'  }"><i class="bi bi-circle-fill"></i></div>
         </div>
@@ -31,14 +32,14 @@ import CIndicator from './CIndicatorView.vue';
 
 export default {
     name: 'SourceView',
-    props: ['id','identify', 'status', 'traffic','description', 'source'],
+    props: ['id','identify', 'status', 'traffic','description', 'source', 'marker'],
     components: { CIndicator },
     setup() {
         const connects = inject('connects')
         const cts = ref({to: false, from: false})
         const showStatus = ref(false)
-
-        return { connects, cts, showStatus }
+        const markers = inject('markers')
+        return { connects, cts, showStatus, markers }
     },
     beforeMount(){
         this.updateIndicators()
