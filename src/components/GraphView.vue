@@ -72,12 +72,12 @@ const colors = ["#F06","#f60", "#06F"]
       const data = ref({});
       const presetIndex = ref(5)
       const preset = {
-        4: { period: 'now-1h:now', interval: '1m', name: '1 Час' },
-        5: { period: 'now-3h:now', interval: '1m', name: '3 Часа' },
-        6: { period: 'now-6h:now', interval: '2m', name: '6 Часов' },
-        7: { period: 'now-24h:now', interval: '5m', name: '1 День' },
-        8: { period: 'now-2d:now', interval: '10m', name: '2 Дня' },
-        9: { period: 'now-7d:now', interval: '30m', name: '7 Дней' },
+        4: { period: 'now-1h:now', interval: '1m', name: '1 Hour' },
+        5: { period: 'now-3h:now', interval: '1m', name: '3 Hours' },
+        6: { period: 'now-6h:now', interval: '2m', name: '6 Hours' },
+        7: { period: 'now-24h:now', interval: '5m', name: '1 Day' },
+        8: { period: 'now-2d:now', interval: '10m', name: '2 Days' },
+        9: { period: 'now-7d:now', interval: '30m', name: '7 Days' },
       }
       const option = ref({
         animation: false,
